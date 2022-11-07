@@ -1,0 +1,46 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    jdbc-url: jdbc:postgresql://192.168.0.73:5432/DB1
+    password: sri
+    username: postgres
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+
+db2:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    jdbc-url: jdbc:postgresql://192.168.0.73:5432/DB2
+    password: sri
+    username: postgres
+logging:
+  file:
+    name: application.log
+  level:
+    com:
+      sam:
+        restcontroller: DEBUG
+  pattern:
+    console: '%date{ISO8601} %-5level %class{0}:%L - [%X] %msg%n'
+    file: '%date{ISO8601} %-5level %class{0}:%L - [%X] %msg%n0'
+db3:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    jdbc-url: jdbc:postgresql://192.168.0.103:5432/demo
+    password: db2admin
+    username: postgres    
+    

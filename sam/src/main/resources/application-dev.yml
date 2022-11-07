@@ -1,0 +1,20 @@
+logging:
+  file:
+    name: application.log
+  level:
+    com:
+      example:
+        demo:
+          controller: DEBUG
+  pattern:
+    console: '%date{ISO8601} %-5level %class{0}:%L - [%X] %msg%n'
+    file: '%date{ISO8601} %-5level %class{0}:%L - [%X] %msg%n'
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    password: srilll
+    url: jdbc:postgresql://localhost:5432/lineone
+    username: postgreslll
+  jpa:
+    hibernate:
+      ddl-auto: update
